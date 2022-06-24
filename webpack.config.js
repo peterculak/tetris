@@ -13,7 +13,8 @@ const config = {
   },
   devServer: {
     open: true,
-    host: "localhost",
+    host: "0.0.0.0",
+    allowedHosts: ["all"],
     port: 9000,
   },
   plugins: [
@@ -33,7 +34,7 @@ const config = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [ "css-loader", "sass-loader"],
+        use: ["css-loader", "sass-loader"],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,

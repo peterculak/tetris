@@ -15,6 +15,7 @@ yarn build
 to bundle your application
 
 Play the game run
+
 ```
 yarn serve
 ```
