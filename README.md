@@ -19,3 +19,5 @@ Play the game run
 ```
 yarn serve
 ```
+
+[View Demo](https://peterculak.github.io/tetris/)
