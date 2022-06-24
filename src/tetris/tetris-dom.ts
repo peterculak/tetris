@@ -19,9 +19,10 @@ enum Controls {
 }
 
 type Options = {
-  controls: {
+  controls?: {
     [K in Controls]: string;
   };
+  dropInterval?: number;
 };
 
 export default class TetrisDom {
@@ -30,7 +31,6 @@ export default class TetrisDom {
   private game: Game;
   private lastTime: number = 0;
   private dropCounter: number = 0;
-  private dropInterval: number = 1000;
 
   private defaults: Options = {
     controls: {
@@ -39,6 +39,7 @@ export default class TetrisDom {
       down: "ArrowDown",
       rotate: "ArrowUp",
     },
+    dropInterval: 1000,
   };
 
   constructor(
@@ -74,7 +75,7 @@ export default class TetrisDom {
     this.lastTime = time;
 
     this.dropCounter += deltaTime;
-    if (this.dropCounter > this.dropInterval) {
+    if (this.dropCounter > this.options.dropInterval) {
       this.game.moveDown();
       this.dropCounter = 0;
     }

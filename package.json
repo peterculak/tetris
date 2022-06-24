@@ -28,5 +28,6 @@
   },
   "version": "1.0.0",
   "description": "Tetris in typescript",
-  "name": "tetris"
+  "name": "tetris",
+  "homepage": "https://peterculak.github.io/tetris/"
 }
